@@ -14,21 +14,34 @@ docker pull <nombre imagen>:<tag>
 ```
 
 Descargar la imagen **hello-world**
-# COMPLETAR
+```
+docker pull hello-world
+```
+
+<img width="1132" height="242" alt="image" src="https://github.com/user-attachments/assets/a7fa8a3d-c15b-4559-ad44-4f2cea4f3c9b" />
+
+
+
 
 **¿Qué es nginx?**
+
+Es un servidor web de código abierto, proxy inverso, balanceador de carga y caché de contenido de alto rendimiento.
 # COMPLETAR 
 
 Descargar la imagen  **nginx** en la versión **alpine**
-# COMPLETAR
+```
+docker pull nginx:alpine
+```
+<img width="1126" height="481" alt="image" src="https://github.com/user-attachments/assets/dcd94938-489c-4af0-babd-f2d30ef28161" />
+
 
 ### Listar imágenes
 
 ```
 docker images
 ```
+<img width="1698" height="231" alt="image" src="https://github.com/user-attachments/assets/20cc30e6-2382-418c-b38a-0757b759216e" />
 
-# COLOCAR UNA CAPTURA DE PANTALLA DEL RESULTADO 
 
 **Identificadores**
 
@@ -43,10 +56,15 @@ docker inspect <nombre imagen>:<tag>
 ```
 
 Inspeccionar la imagen hello-world 
+<img width="1185" height="938" alt="image" src="https://github.com/user-attachments/assets/a9367c3f-7b9b-481a-8360-33ce118c1fae" />
+
+
 # COMPLETAR
 
-**¿Con qué algoritmo se está generando el ID de la imagen**
-# COMPLETAR
+**¿Con qué algoritmo se está generando el ID de la imagen?**
+
+El ID de la imagen se genera con el algoritmo SHA256. Esto se puede verificar en la salida del comando docker inspect hello-world, donde el campo "Id" muestra el prefijo sha256: seguido del hash de la imagen.
+
 
 ### Filtrar imágenes
 
@@ -54,6 +72,9 @@ Inspeccionar la imagen hello-world
 docker images | grep <termino a buscar>
 
 ```
+**Nota:** En Windows, el comando `grep` no está disponible, por lo que se utilizó  `findstr` como alternativa equivalente:
+<img width="1278" height="184" alt="image" src="https://github.com/user-attachments/assets/c4fb2129-0126-4693-9c2b-3f8bb642f6ac" />
+
 
 ### Para eliminar una imagen
 Eliminar permanentemente la imagen de tu sistema Docker.
@@ -63,6 +84,9 @@ docker rmi <nombre imagen>:<tag>
 ```
 
 Eliminar la imagen hello-world 
+
+<img width="984" height="139" alt="image" src="https://github.com/user-attachments/assets/44ac2a54-0841-42ea-b508-3be847584e6b" />
+
 # COMPLETAR
 
 -f: Es la opción para forzar la eliminación de la imagen incluso si hay contenedores en ejecución que utilizan esa imagen.
