@@ -6,9 +6,17 @@ docker exec <nombre contenedor> <comando> <argumentos opcionales>
 ```
 # COMPLETAR
 ### ¿Para qué se usa el comando ls?
+El comando ls se utiliza para listar archivos o directorios en Linux y otros sistemas operativos basados en Unix.
+
 ### ¿Para qué sirve el argumento -l junto al comando ls?
+El argumento -l junto al comando ls en sistemas Linux/Unix sirve para mostrar el contenido de un directorio en formato de lista larga.
 ### Usar el contenedor de jenkins creado previamente y ejecutar el comando ls con el argumento -l
-# COMPLETAR
+```
+docker exec srv-jenkins ls -l
+```
+
+<img width="876" height="626" alt="image" src="https://github.com/user-attachments/assets/c881ee8c-48c1-4047-ad36-8cb291f44875" />
+
 # COLOCAR UNA CAPTURA DE PANTALLA
 
 ### Para ejecutar un shell interactivo en un contenedor de Docker especificado.
@@ -44,10 +52,16 @@ Ejecutar
 echo "Hola mundo"
 ```
 
+<img width="670" height="157" alt="image" src="https://github.com/user-attachments/assets/1ddc4bcf-12f5-4eda-97da-3ecdbb04bcda" />
+
+
 Ejecutar
 ```
 whoami
 ```
+<img width="687" height="96" alt="image" src="https://github.com/user-attachments/assets/23f2cb4e-5ddf-45c1-951b-b269ff22e16f" />
+
+
 # COLOCAR UNA CAPTURA DE PANTALLA
 
 **Si se visualiza el mensaje command not found, considerar**
@@ -67,8 +81,15 @@ docker exec -it <nombre contenedor> <programa o comando>
 ```
 
 ### Ahora puedes acceder al contenedor de jenkins y obtener la contraseña ubicada en /var/jenkins_home/secrets/initialAdminPassword
+```
+ cat /var/jenkins_home/secrets/initialAdminPassword
+```
 
-# COMPLETAR
+<img width="1062" height="85" alt="image" src="https://github.com/user-attachments/assets/b675951e-11af-4281-a28e-9746335e09e2" />
+<img width="1882" height="1117" alt="image" src="https://github.com/user-attachments/assets/1fa8705a-5a24-404d-9997-9ce175a5e700" />
+<img width="1859" height="1117" alt="image" src="https://github.com/user-attachments/assets/fd97ec35-80b7-485a-a6b2-c2a6fca320c1" />
+
+
 
 ### Colocar una captura de pantalla de la ventana que aparece después de colocar la contraseña.
 
